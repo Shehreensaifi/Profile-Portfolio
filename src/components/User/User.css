@@ -1,0 +1,159 @@
+.box {
+  width: 600px;
+  height: 500px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  background-color: white;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 4rem;
+  overflow: hidden;
+  position: relative;
+  flex: 1 0 25rem;
+  z-index: 0;
+  transition: 0.2s;
+}
+
+.box:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0.5rem 0.75rem 1.5rem lightgreen;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-content {
+  max-width: 380px;
+  margin: 1rem;
+}
+.home-content h1 {
+  margin: 1rem 0;
+}
+h3 {
+  font-weight: normal;
+}
+.home-content p {
+  font-size: 14px;
+}
+.rating {
+  color: rgb(8, 132, 8);
+}
+.home-img {
+  margin-right: 3rem;
+}
+.home-img img {
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  margin-top: 3rem;
+  border-radius: 50%;
+}
+
+.box::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.card::after {
+  width: 100%;
+  height: 100%;
+  background-color: lightgreen;
+  background-image: linear-gradient(45deg, lightgreen 0%, green 100%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  clip-path: ellipse(40% 55% at 70% 0);
+  transition: 0.2s;
+}
+.card1::after {
+  width: 100%;
+  height: 100%;
+  background-color: lightgreen;
+  background-image: linear-gradient(45deg, lightgreen 100%, green 0%);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  clip-path: ellipse(40% 55% at 70% 0);
+  transition: 0.2s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+  .box {
+    background-color: white;
+  }
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .box {
+    width: 400px;
+    height: 400px;
+  }
+}
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .box {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+  .box {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+  .box {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  .box {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+  .box {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+  .box {
+    width: 400px;
+    height: 400px;
+  }
+}
